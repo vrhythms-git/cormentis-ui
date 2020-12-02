@@ -1,0 +1,65 @@
+<!-- <app-header></app-header> -->
+<!-- <meta name="google-signin-client_id" content="375538955820-4069j1gjuav1vikavdr6gc02bea1585g.apps.googleusercontent.com">
+<meta name="google-site-verification" content="PMFCCWMDhawL2bB5-HD7raMAHQXA0-S9RJ9kQR3vRjI" /> -->
+<script async defer src="https://apis.google.com/js/api.js"></script>
+<div class="container col-md-4 col-sm-4 border border-info rounded-lg mt-2 p-4" style="overflow: hidden;">
+    <nav class="navbar justify-content-center">
+        <div class="navbar-brand">
+            <a class="navbar-item">
+                <img src="assets/cormentislogo.png" style="height:5rem;width:13rem;">
+            </a>
+        </div>
+    </nav>
+    <h5>Sign in</h5>
+    <br>
+    <div>
+        <div class="border rounded-lg" style="height:6vh">
+            
+            <div class="form-group row">
+
+                <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div>	 -->
+
+                <button id="signUpWithGoogleId" type="submit" routerLinkActive="active" class="btn btn-success btn-block" 
+                            (click)="signInWithGoogle()">Sign in with Google</button>
+                            <!-- <span class="icon"></span> -->
+            </div>
+            <!-- <div class="row justify-content-center">
+                 <button id="signUpWithGoogleId" routerLinkActive="active" class="btn btn-success btn-block" (click)="signInWithGoogle()" > 
+                 <img src="assets/googleimg.png" style="height:2rem;width: 2rem;">
+                <h5 class="mt-2">Sign up with Google</h5> 
+                </div>     
+            </div> -->
+        </div>
+        <hr>
+        <form [formGroup]="signInForm" class="p-2">
+
+            <div class="form-group row">
+                <input type="email" class="form-control form-control-sm " id="email" formControlName="email" placeholder="Email ID" required>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group row">
+                <input type="password" class="form-control form-control-sm " id="pwd" formControlName="pwd" placeholder="Create a Password" required>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group row">
+                <button id="signInBtn" type="submit"  routerLinkActive="active" class="btn btn-success btn-block" (click)="signIn()">Sign in</button>
+            </div>
+            <!-- <div>
+                <span style="font-size: 0.75rem">By signing up, you agree to the
+                    <a href="">Terms of service</a> and
+                    <a href=""> Privacy policy</a>
+                </span>
+            </div> -->
+            <div class="text-center mt-1">
+                <h5> Don't have an account?</h5>
+            </div>
+            <div class="text-center">
+                <h5>
+                    <a routerLink="/" id="signinid">sign up for free?</a>
+                </h5>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- <app-footer></app-footer> -->

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "vr-cormentis-project": {
+      "hosting": {
+        "cormentis": [
+          "vr-cormentis-project"
+        ]
+      }
+    }
+  }
+}
