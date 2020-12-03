@@ -8,7 +8,7 @@ const cors = require('cors')
 
 const app = express();
 
-let port = 8081;
+let port = 8080;
 app.use(express.static(__dirname +'/dist/cormentis'));
 
 app.get('/', function(req,res) {

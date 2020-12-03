@@ -16,7 +16,7 @@ export class CormentisService {
   constructor(private http: HttpClient) { }
 
  // private baseURL = "http://localhost:8081/api/";
-  private baseURL = "https://cormentis.herokuapp.com/api/";
+  private baseURL = "https://cormentis-ui-build.herokuapp.com/api/";
 private signupurl =  this.baseURL + "signup";
 private signinurl = this.baseURL + "signin";
 
