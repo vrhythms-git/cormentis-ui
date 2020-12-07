@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Router } from '../../../node_modules/@angular/router';
 
 @Component({
   selector: 'app-mainpage',
@@ -7,8 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainpageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
+
+  users = ['abc','xyz'];
+    // Technologies: [
+    //   'Machine Learning',
+    //   'Design',
+    //   'AI'
+    // ],
+    // Education: [
+    //   'Machine Learning',
+    //   'Design',
+    //   'AI'
+    // ],
+    // Companies: [
+    //   'Machine Learning',
+    //   'Design',
+    //   'AI'
+    // ]
+  
+
 
   ngOnInit(): void {
+  }
+
+  search(){
+    this.router.navigate(['/second']);
   }
 }

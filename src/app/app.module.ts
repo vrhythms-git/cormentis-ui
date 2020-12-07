@@ -19,6 +19,15 @@ import {
   GoogleLoginProvider,
   FacebookLoginProvider
 } from 'angularx-social-login';
+import { MatTreeModule } from '@angular/material/tree';
+import { SecondpageComponent, ChecklistDatabase } from './secondpage/secondpage.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import {MatSelectModule} from '@angular/material/select';
+import {MatTableModule} from '@angular/material/table';
+import { WeightageDetailComponent } from './weightage-detail/weightage-detail.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +36,9 @@ import {
     HeaderComponent,
     FooterComponent,
     MainpageComponent,
-    SignInComponent
+    SignInComponent,
+    SecondpageComponent,
+    WeightageDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +51,14 @@ import {
     MatCardModule,
     MatChipsModule,
     MatPaginatorModule,
-    SocialLoginModule
+    SocialLoginModule,
+    MatTreeModule,
+    MatCheckboxModule,
+    MatIconModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatTableModule
   ],
   providers: [ {
     provide: 'SocialAuthServiceConfig',
@@ -55,7 +73,8 @@ import {
         }
       ]
     } as SocialAuthServiceConfig,
-  }],
+  },
+  ChecklistDatabase],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

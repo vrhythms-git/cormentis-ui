@@ -1,20 +1,26 @@
-mat-grid-tile {
-    background: lightblue;
-  }
-  h1,h2{
+
+  h1,h3{
       font-weight: bold;
   }
-  mat-card{
-    background-color: whitesmoke;
-    border-width: thick;
-  }
-  .search{
-    background-color: whitesmoke;
+  #heading{
+    font-weight: bold;
   }
   #search{
-  height: 2rem;
-  width: 65vw;
-  border: none;
+  height: 4rem;
+  border: none; 
   }
+  mat-chip.mat-standard-chip{
+    background-color:aliceblue;
+  }
+  
+  #mc{
+    background-color: white;
+  }
+  .border{
+    border-top:0.6rem solid blue !important;
+  } 
+  .chip-border{
+    border-top:0.4rem solid blue !important;
+  } 
 
   

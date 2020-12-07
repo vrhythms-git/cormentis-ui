@@ -1,0 +1,90 @@
+<app-header></app-header>
+
+<div class="container">
+  <div class="p-2 ml-2 mr-2 search">
+    <span>
+      <input type="text" class="col-md-10" placeholder="Enter Keywords that describe the skills you are seeking & any appealing attributes of your company"
+        id="search">
+      <button class="btn btn-success btn-lg justify-content-right col-md-2" type="submit" (click)="search()">Search</button>
+    </span>
+  </div>
+  <div class="row m-3">
+    <h2 class="col-md-8">25 Matches Found</h2>
+    <!-- <div class="col-md row"> -->
+    <h3 class="col-md-2 row text-center">Sort By</h3>
+    <!-- <mat-label class="col-md-3">Favorite food</mat-label> -->
+    <mat-select name="food" class="col-md-2 border">
+      <mat-option *ngFor="let food of foods" [value]="food.value">
+        {{food.viewValue}}
+      </mat-option>
+    </mat-select>
+  <!-- </div> -->
+  </div>
+  <div class="row">
+    <div class="col-md col-sm ml-2 mt-2">
+      <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="border brdr rounded-lg border-info border-right-0 border-bottom-0 border-left-0">
+        <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle matTreeNodePadding>
+          <button mat-icon-button disabled></button>
+          <mat-checkbox class="checklist-leaf-node" [checked]="checklistSelection.isSelected(node)" (change)="todoLeafItemSelectionToggle(node)">{{node.item}}</mat-checkbox>
+        </mat-tree-node>
+
+        <mat-tree-node *matTreeNodeDef="let node; when: hasNoContent" matTreeNodePadding>
+          <button mat-icon-button disabled></button>
+          <mat-form-field>
+            <mat-label>New item...</mat-label>
+            <input matInput #itemValue placeholder="Ex. Lettuce">
+          </mat-form-field>
+          <button mat-button (click)="saveNode(node, itemValue.value)">Save</button>
+        </mat-tree-node>
+
+        <mat-tree-node *matTreeNodeDef="let node; when: hasChild" matTreeNodePadding>
+          <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'Toggle ' + node.item">
+            <mat-icon class="mat-icon-rtl-mirror">
+              {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+            </mat-icon>
+          </button>
+          {{node.item}}
+        </mat-tree-node>
+      </mat-tree>
+    </div>
+
+    <div class="col-md-8 col-sm-8">
+      <mat-card class="mr-2 mt-2 border brdr rounded-lg border-info border-right-0 border-bottom-0 border-left-0">
+        <mat-card-title>Jacob Martin</mat-card-title>
+        <mat-card-subtitle>
+          <mat-chip-list aria-label="Skills">
+            <mat-chip>Machine Learning</mat-chip>
+            <mat-chip>College Education</mat-chip>
+            <mat-chip>IIT JEE</mat-chip>
+            <mat-chip>IDFC FIRST Bank</mat-chip>
+          </mat-chip-list>
+        </mat-card-subtitle>
+      </mat-card>
+      <mat-card class="mr-2 mt-3 border brdr rounded-lg border-info border-right-0 border-bottom-0 border-left-0">
+        <mat-card-title>Jacob Martin</mat-card-title>
+        <mat-card-subtitle>
+          <mat-chip-list aria-label="Skills">
+            <mat-chip>Machine Learning</mat-chip>
+            <mat-chip>College Education</mat-chip>
+            <mat-chip>IIT JEE</mat-chip>
+            <mat-chip>IDFC FIRST Bank</mat-chip>
+          </mat-chip-list>
+        </mat-card-subtitle>
+      </mat-card>
+      <mat-card class="mr-2 mt-3 border brdr rounded-lg border-info border-right-0 border-bottom-0 border-left-0">
+        <mat-card-title>Jacob Martin</mat-card-title>
+        <mat-card-subtitle>
+          <mat-chip-list aria-label="Skills">
+            <mat-chip>Machine Learning</mat-chip>
+            <mat-chip>College Education</mat-chip>
+            <mat-chip>IIT JEE</mat-chip>
+            <mat-chip>IDFC FIRST Bank</mat-chip>
+          </mat-chip-list>
+        </mat-card-subtitle>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+
+<app-footer></app-footer>

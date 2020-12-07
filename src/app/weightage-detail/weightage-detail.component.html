@@ -1,0 +1,72 @@
+<app-header></app-header>
+
+<div class="container">
+  <div class="p-2 ml-2 mr-2 search">
+    <span>
+      <input type="text" class="col-md-10" placeholder="Enter Keywords that describe the skills you are seeking & any appealing attributes of your company"
+        id="search">
+      <button class="btn btn-success btn-lg justify-content-right col-md-2" type="submit">Search</button>
+    </span>
+  </div>
+  <div class="row">
+    <h1 class="col">Nicoles Orden</h1>
+    <h1 class="col text-right">Related Profiles</h1>
+  </div>
+
+  <div class="row">
+    <!-- <div class="col-md "> -->
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 border border-info rounded col-md m-2 border-right-0 border-bottom-0 border-left-0">
+        <ng-container matColumnDef="keyword">
+          <th mat-header-cell *matHeaderCellDef> Keywords </th>
+          <td mat-cell *matCellDef="let element"> {{element.keyword}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="weightage">
+          <th mat-header-cell *matHeaderCellDef> Weightage </th>
+          <td mat-cell *matCellDef="let element"> {{element.weightage}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    <!-- </div> -->
+    <div class="col-md-4">
+      <mat-card class="mr-2 mt-2 border brdr rounded-lg border-info border-right-0 border-bottom-0 border-left-0">
+        <mat-card-title>Jacob Martin</mat-card-title>
+        <mat-card-subtitle>
+          <mat-chip-list aria-label="Skills">
+            <mat-chip>Machine Learning</mat-chip>
+            <mat-chip>College Education</mat-chip>
+            <mat-chip>IIT JEE</mat-chip>
+            <mat-chip>IDFC FIRST Bank</mat-chip>
+          </mat-chip-list>
+        </mat-card-subtitle>
+      </mat-card>
+      <mat-card class="mr-2 mt-3 border brdr rounded-lg border-info border-right-0 border-bottom-0 border-left-0">
+        <mat-card-title>Jacob Martin</mat-card-title>
+        <mat-card-subtitle>
+          <mat-chip-list aria-label="Skills">
+            <mat-chip>Machine Learning</mat-chip>
+            <mat-chip>College Education</mat-chip>
+            <mat-chip>IIT JEE</mat-chip>
+            <mat-chip>IDFC FIRST Bank</mat-chip>
+          </mat-chip-list>
+        </mat-card-subtitle>
+      </mat-card>
+      <mat-card class="mr-2 mt-3 border brdr rounded-lg border-info border-right-0 border-bottom-0 border-left-0">
+        <mat-card-title>Jacob Martin</mat-card-title>
+        <mat-card-subtitle>
+          <mat-chip-list aria-label="Skills">
+            <mat-chip>Machine Learning</mat-chip>
+            <mat-chip>College Education</mat-chip>
+            <mat-chip>IIT JEE</mat-chip>
+            <mat-chip>IDFC FIRST Bank</mat-chip>
+          </mat-chip-list>
+        </mat-card-subtitle>
+      </mat-card>
+    </div>
+  </div>
+
+</div>
+
+<app-footer></app-footer>
